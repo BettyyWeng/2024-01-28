@@ -32,9 +32,16 @@ def playGame():
             count +=1
         print(f"您已經猜了{count}次")
 
-while(True):
-    playGame()
-    menu_value = pyip.inputMenu(["yes","no"],prompt="您還要繼續嗎?\n",numbered=True)
-    if menu_value == 'no':
-        break
-print("遊戲結束")
+def main():
+    while(True):
+        playGame()
+        menu_value = pyip.inputMenu(["yes","no"],prompt="您還要繼續嗎?\n",numbered=True)
+        if menu_value == 'no':
+            break
+    print("遊戲結束")
+
+#python專案，主要執行檔的寫法
+#__name__為內建的變數
+print(__name__)
+if __name__ == '__main__':
+    main()
